@@ -7,9 +7,9 @@ import io.cucumber.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(strict = true, features="src/test/resources/Features", glue= {"StepDefinitions"},
-monochrome = true,
-plugin = {"pretty", "junit:target/JUNÝTReports/report.xml"}
+@CucumberOptions(strict = true, features="src/test/resources/Features/Wordle.feature", glue= {"StepDefinitions"},
+monochrome = true
+
 		)
 public class TestRunner {
 

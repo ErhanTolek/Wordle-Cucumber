@@ -38,7 +38,11 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.0.0-alpha-5</version>
 		</dependency>
-
+		<dependency>
+			<groupId>io.github.sukgu</groupId>
+			<artifactId>automation</artifactId>
+			<version>0.1.4</version>
+		</dependency>
 
 	</dependencies>
 </project>
