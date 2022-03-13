@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -79,7 +80,22 @@ public class TryWord {
 		driver.close();
 	}
 	
-
+	@Then("Should be a deny pop-up")
+	public void deny_popup() throws InterruptedException {
+		Thread.sleep(1000);
+		
+		String gametoaster = "return document.querySelector(\"body > game-app\").shadowRoot.querySelector(\"#game-toaster\")";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement alert = (WebElement) js.executeScript(gametoaster);
+		
+		// Checking "Not in word list" text is exist or not //
+		if(alert.findElement(By.cssSelector("game-toast")).isDisplayed()) {
+			assert true;
+			driver.close();
+		}
+		
+		}
+	
 
 }
 

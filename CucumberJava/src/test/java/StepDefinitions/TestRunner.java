@@ -10,6 +10,7 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(strict = true, features="src/test/resources/Features/Wordle.feature", glue= {"StepDefinitions"},
 monochrome = true
 
+
 		)
 public class TestRunner {
 
