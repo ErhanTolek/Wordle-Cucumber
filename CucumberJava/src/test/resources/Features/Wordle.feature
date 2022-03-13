@@ -9,7 +9,7 @@ Feature: Wordle Features
     Then Should see keyboard and input rows
 
   @sanity1
-  Scenario Outline: 
+  Scenario Outline: Giving a invalid word
     Given Wordle Game Platform is open
     And Try the word "<Word>"
     When Click the enter
